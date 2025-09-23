@@ -7,8 +7,8 @@ int counter;
 void setup(){
       noLoop();
       size(500,500);
-      int cols = width / dSize;
-      int rows = (height-100) / dSize;
+      int cols = Math.round(width / dSize);
+      int rows = Math.round((height-100) / dSize);
       dice = new Die[cols * rows];
       for (int i = 0; i < cols; i++) {
         for (int j = 0; j < rows; j++) {
@@ -47,8 +47,8 @@ void keyPressed() {
     }
     if (key == '+') {
       dSize++;
-      int cols = width / dSize;
-      int rows = (height-100) / dSize;
+      int cols = Math.round(width / dSize);
+      int rows = Math.round((height-100) / dSize);
       dice = new Die[cols * rows];
       for (int i = 0; i < cols; i++) {
         for (int j = 0; j < rows; j++) {
@@ -63,8 +63,11 @@ void keyPressed() {
     }
     if (key == '-') {
       dSize--;
-      int cols = width / dSize;
-      int rows = (height-100) / dSize;
+      if (dSize < 1) {
+        dSize = 1;
+      }
+      int cols = Math.round(width / dSize);
+      int rows = Math.round((height-100) / dSize);
       dice = new Die[cols * rows];
       for (int i = 0; i < cols; i++) {
         for (int j = 0; j < rows; j++) {
