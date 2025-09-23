@@ -17,8 +17,8 @@ void setup(){
           dice[i + j * cols] = new Die(x, y);
         }
       }
-  }
-  void draw(){
+}
+void draw(){
       background(0,0,0);
       for (Die d : dice) {
         d.roll();
@@ -32,13 +32,11 @@ void setup(){
       text("sum = " +sum, width/2+100, height-50);
       sum=0;
       text("avg of " +counter+" rolls = " +avg, width/2-200, height-50);
-  }
-  void mousePressed()
-  {
+}
+void mousePressed(){
       redraw();
-  }
-  void keyPressed() 
-  {
+}
+void keyPressed() {
     if (key == 'r') {
       sumsum = 0;
       counter = 0;
@@ -79,9 +77,8 @@ void setup(){
       counter = 0;
       redraw();
     }
-  }
-  class Die
-  {
+}
+class Die{
       int roll;
       int dieX=0;
       int dieY=0;
@@ -116,4 +113,4 @@ void setup(){
           }
           fill(255);
       }
-  }
+}
