@@ -20,7 +20,8 @@ void setup(){
 }
 void draw(){
       background(0,0,0);
-      for (Die d : dice) {
+      for (int i = 0; i < dice.length; i++) {
+        Die d = dice[i];
         d.roll();
         d.show();
       }
