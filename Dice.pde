@@ -26,7 +26,7 @@ void draw(){
       }
       counter++;
       sumsum+=sum;
-      int(avg=sumsum/counter);
+      avg=Math.round(sumsum/counter);
       fill(255);
       textSize(24);
       text("sum = " +sum, width/2+100, height-50);
