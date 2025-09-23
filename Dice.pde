@@ -47,8 +47,8 @@ void keyPressed() {
     }
     if (key == '+') {
       dSize++;
-      int cols = Math.round(width / dSize);
-      int rows = Math.round((height-100) / dSize);
+      int cols = (int)Math.floor(width / dSize);
+      int rows = (int)Math.floor((height-100) / dSize);
       dice = new Die[cols * rows];
       for (int i = 0; i < cols; i++) {
         for (int j = 0; j < rows; j++) {
@@ -66,8 +66,8 @@ void keyPressed() {
       if (dSize < 1) {
         dSize = 1;
       }
-      int cols = Math.round(width / dSize);
-      int rows = Math.round((height-100) / dSize);
+      int cols = (int)Math.floor(width / dSize);
+      int rows = (int)Math.floor((height-100) / dSize);
       dice = new Die[cols * rows];
       for (int i = 0; i < cols; i++) {
         for (int j = 0; j < rows; j++) {
