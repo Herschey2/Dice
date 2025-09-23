@@ -20,9 +20,9 @@ void setup(){
 }
 void draw(){
       background(0,0,0);
-      for (int i = 0; i < dice.length; i++) {
-        dice[i].roll();
-        dice[i].show();
+      for (Die d : dice) { 
+        d.roll();
+        d.show();
       }
       counter++;
       sumsum+=sum;
