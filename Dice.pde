@@ -26,7 +26,7 @@ void draw(){
       }
       counter++;
       sumsum+=sum;
-      avg=sumsum/counter;
+      int avg=sumsum/counter;
       fill(255);
       textSize(24);
       text("sum = " +sum, width/2+100, height-50);
