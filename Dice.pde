@@ -79,7 +79,7 @@ void keyPressed() {
     }
 }
 class Die{
-      int roll;
+      int rolls;
       int dieX=0;
       int dieY=0;
       Die(int x, int y)
@@ -89,25 +89,25 @@ class Die{
       }
       void roll()
       {
-        roll=(int)(Math.random()*6+1);
-        sum+=roll;
+        rolls=(int)(Math.random()*6+1);
+        sum+=rolls;
       }
       void show()
       {
           rect(dieX,dieY,dSize,dSize);
           fill(0);
-          if (roll == 1 || roll == 3 || roll == 5) {
+          if (rolls == 1 || rolls == 3 || rolls == 5) {
             ellipse(dieX + dSize / 2, dieY + dSize / 2, dSize/5, dSize/5);
           }
-          if (roll != 1) {
+          if (rolls != 1) {
             ellipse(dieX + dSize * 0.75, dieY + dSize * 0.25, dSize/5, dSize/5);
             ellipse(dieX + dSize * 0.25, dieY + dSize * 0.75, dSize/5, dSize/5);
           }
-          if (roll >= 4) {
+          if (rolls >= 4) {
             ellipse(dieX + dSize * 0.25, dieY + dSize * 0.25, dSize/5, dSize/5);
             ellipse(dieX + dSize * 0.75, dieY + dSize * 0.75, dSize/5, dSize/5);
           }
-          if (roll == 6) {
+          if (rolls == 6) {
             ellipse(dieX + dSize * 0.25, dieY + dSize * 0.5, dSize/5, dSize/5);
             ellipse(dieX + dSize * 0.75, dieY + dSize * 0.5, dSize/5, dSize/5);
           }
