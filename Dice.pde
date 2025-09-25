@@ -19,7 +19,7 @@ void setup(){
       }
 }
 void draw(){
-      background(0,0,0);
+      background(255,180,185);
       for (Die d : dice) { 
         d.roll();
         d.show();
@@ -97,7 +97,7 @@ class Die{
       }
       void show()
       {
-          rect(dieX,dieY,dSize,dSize);
+          rect(dieX,dieY,dSize,dSize, dSize/4);
           fill(0);
           if (rolls == 1 || rolls == 3 || rolls == 5) {
             ellipse(dieX + dSize / 2, dieY + dSize / 2, dSize/5, dSize/5);
